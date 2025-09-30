@@ -19,5 +19,5 @@ model Movie {
   updatedAt DateTime @updatedAt
 
   @@map("movies")
-  
+
 }
