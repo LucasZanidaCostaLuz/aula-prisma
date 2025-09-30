@@ -1,25 +1,21 @@
-import prisma from "../../prisma/prisma.js";
+import prisma from '../../prisma/prisma.js'
 
 class MoviesModel {
-  // Obter todos os jogos
   async findAll() {
-    const movie = await prisma.movie.findMany({
-        data
-    });
+    const movie = await prisma.movie.findMany();
 
     return {
       total: movie.length,
-      games,
+      movie,
     };
   }
 
-  // Criar um novo jogo
   async create(data) {
-    const movies = await prisma.movies.create({
+    const movie = await prisma.movie.create({
       data,
     });
 
-    return game;
+    return movie;
   }
 }
 

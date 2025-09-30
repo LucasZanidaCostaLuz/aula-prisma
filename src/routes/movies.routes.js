@@ -1,9 +1,9 @@
 import express from 'express';
 import movieController from '../controllers/movie.controller.js';
 
-const moviesRouter = express.Router();
+const movieRouter = express.Router();
 
-moviesRouter.get('/', movieController.findAll);
-moviesRouter.post('/', movieController.create);
+movieRouter.get('/', movieController.findAll);
+movieRouter.post('/', movieController.create);
 
-export default moviesRouter;
+export default movieRouter;

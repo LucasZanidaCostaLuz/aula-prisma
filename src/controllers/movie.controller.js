@@ -2,7 +2,6 @@ import MovieModel from "../models/movie.model.js";
 
 class MovieController {
   async findAll(req, res) {
-    const { name, platform } = req.query;
 
     try {
       const movies = await MovieModel.findAll();
@@ -37,11 +36,11 @@ class MovieController {
 
       return res.status(201).json({
         message: "New movie successufully created! DuoLingo singing!",
-        newGame,
+        newMovie,
       });
     } catch (error) {
       console.error("Error creating a new movie", error);
-      res.status(500).json({ error: "Error creating a new game" });
+      res.status(500).json({ error: "Error creating a new movie" });
     }
   }
 }
